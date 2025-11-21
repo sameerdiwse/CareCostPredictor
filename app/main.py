@@ -5,7 +5,6 @@ import streamlit as st
 # Define the page layout
 st.title('Health Insurance Cost Predictor')
 
-st.button('predict the price')
 
 categorical_options = {
     'Gender': ['Male', 'Female'],
@@ -21,3 +20,13 @@ categorical_options = {
     ],
     'Insurance Plan': ['Bronze', 'Silver', 'Gold']
 }
+
+row1 = st.columns(3)
+row2 = st.columns(3)
+row3 = st.columns(3)
+row4 = st.columns(3)
+
+with row1[0]:
+    age = st.number_input('Age', min_value=18, step=1, max_value=100)
+
+st.button('predict the price')
